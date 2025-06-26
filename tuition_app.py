@@ -173,8 +173,11 @@ def get_tuition(care_type, age_group, household_size, income_level):
 
 st.title("Rangeley Child Care Center Tuition Estimator")
 st.markdown("""
-#### This form will provide an approximate weekly tuition at Rangeley Child Care Center (RCCC). Tuition is calculated using a sliding scale based on type of care, child age, household size, and gross household income. Please note that there may be other benefits available to lower the tuition.  Also, for families that qualify for Maine CCAP,  the total tuition per family shall not exceed 10% of the family's gross income, regardless of the number of children enrolled at RCCC.  This is only an estimate and is subject to change upon formal enrollment.
-""")
+#### This form will provide an <u>**approximate**</u> weekly tuition at Rangeley Child Care Center (RCCC). Tuition is calculated using a sliding scale based on type of care, child age, household size, and gross household income. Please note that there may be other benefits available to lower the tuition.  
+
+**Also, for families that qualify for Maine CCAP,  the total tuition per family shall not exceed 10% of the family's gross income, regardless of the number of children enrolled at RCCC.**  
+This is only an estimate and is subject to change upon formal enrollment.
+""", unsafe_allow_html=True)
 
 care_type = st.selectbox("Please select full-time or part-time child care:", ["Full-Time", "Part-Time"])
 age_group = st.selectbox("Please select age group of child:", [

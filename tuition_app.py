@@ -49,7 +49,7 @@ if st.button("Calculate Tuition"):
             z = y / 52
             st.markdown(f"""
             <div style='background-color:#b3e5fc;padding:10px;border-radius:5px;color:#111;'>
-            Based on your provided gross household annual income of <b>${x:,.0f}</b>, <u>if your family qualifies for Maine CCAP</u>, the MAXIMUM amount your family will pay for child care fees is approximately <b>${y:,.0f}</b>, which equals <b>${z:,.2f}</b> per week, for ALL children in child care.  As stated above, this <u>may</u> be further reduced by other Maine benefits.
+            Based on your provided gross household annual income of <b>${x:,.0f}</b>, <u>if your family qualifies for Maine CCAP</u>, the MAXIMUM yearly amount your family will pay for child care fees is approximately <b>${y:,.0f}</b>, which equals <b>${z:,.2f}</b> per week, for ALL children in child care.  As stated above, this <u>may</u> be further reduced by other Maine benefits.
             </div>
             """, unsafe_allow_html=True)
     else:

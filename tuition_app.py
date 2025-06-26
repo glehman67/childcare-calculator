@@ -17,7 +17,7 @@ st.title("Rangeley Child Care Center Tuition Estimator")
 st.markdown("""
 #### This form will provide an <u>**approximate**</u> weekly tuition at Rangeley Child Care Center (RCCC). Tuition is calculated using a sliding scale based on type of care, child age, household size, and gross household income. Please note that there may be other benefits available to lower the tuition.  
 
-#### Also, for families that qualify for Maine CCAP,  the total tuition per family shall not exceed <u>5% of the family's gross annual income</u>, regardless of the number of children enrolled at RCCC.
+#### If you qualify for Maine CCAP benefits, the amount of child care fees a family pays WILL NOT EXCEED 10% OF THE FAMILY’S GROSS ANNUAL INCOME FOR ALL CHILDREN IN CHILD CARE.
 #### This is only an estimate and is subject to change upon formal enrollment.
 """, unsafe_allow_html=True)
 
@@ -45,11 +45,11 @@ if st.button("Calculate Tuition"):
         match = re.search(r"\$(\d+)K", income_level)
         if match:
             x = int(match.group(1)) * 1000
-            y = x * 0.05
+            y = x * 0.1
             z = y / 52
             st.markdown(f"""
             <div style='background-color:#b3e5fc;padding:10px;border-radius:5px;color:#111;'>
-            Based on your selected gross household annual income of <b>${x:,.0f}</b>, if you qualify for Maine CCAP the maximum annual tuition you will pay is approximately <b>${y:,.0f}</b>, which equals <b>${z:,.2f}</b> per week, regardless of the number of children enrolled at RCCC. Again, this may be further reduced by other Maine benefits.
+            Based on your provided gross household annual income of <b>${x:,.0f}</b>, <u>if your family qualifies for Maine CCAP</u>, the MAXIMUM amount your family will pay for child care fees is approximately <b>${y:,.0f}</b>, which equals <b>${z:,.2f}</b> per week, for ALL children in child care.  As stated above, this <u>may</u> be further reduced by other Maine benefits.
             </div>
             """, unsafe_allow_html=True)
     else:

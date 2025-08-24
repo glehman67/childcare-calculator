@@ -66,7 +66,8 @@ def calculate_parent_fee(annual_income, household_size, care_type):
     else:
         return full_time_fee
 
-st.title("Maine State Child Care Affordability Program (CCAP) Calculator")
+st.title("Rangeley Child Care Center")
+st.subheader("Maine State Child Care Affordability Program (CCAP) Calculator")
 st.markdown("""
 #### The Maine State Child Care Affordability Program (CCAP) helps income eligible families pay for child care so that parents can work, go to school or participate in a job training program.
 
@@ -187,7 +188,7 @@ st.markdown("""
 
 **Income Eligibility:** All families must meet income guidelines of gross family income at or below 125% of Maine's State Median Income.
 
-**Fee Assessment:** Fees are assessed to all families. For families with more than one child in care, the youngest child is always considered the first child enrolled. The total amount of assessed fees to a family shall not exceed 10% of the family's gross income for all of their children.
+**Fee Assessment:** Fees are assessed to all families. For families with more than one child in care, the youngest child is always considered the first child enrolled. **The total amount of assessed fees to a family shall not exceed 10% of the family's gross income for all of their children.**
 
 **Effective Date:** 10/19/2024
 
